@@ -1,7 +1,5 @@
 package com.dianome.dianome.model;
 
-import java.math.BigInteger;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,13 +15,13 @@ public class EmployeeModel {
   private Integer id;
 
   private String nome;
-  private BigInteger cpf;
+  private String cpf;
 
   @Column(name = "capacidade_veiculo_kg")
   private Integer capacidade;
 
   
-  public EmployeeModel(String nome, BigInteger cpf, Integer capacidade) {
+  public EmployeeModel(String nome, String cpf, Integer capacidade) {
     this.nome = nome;
     this.cpf = cpf;
     this.capacidade = capacidade;
@@ -43,11 +41,11 @@ public class EmployeeModel {
     this.nome = nome;
   }
 
-  public BigInteger getCpf() {
+  public String getCpf() {
     return cpf;
   }
 
-  public void setCpf(BigInteger cpf) {
+  public void setCpf(String cpf) {
     this.cpf = cpf;
   }
 
